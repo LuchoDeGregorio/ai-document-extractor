@@ -1,25 +1,44 @@
-# AI Document Extractor
+# AI Invoice Extractor
 
-Sistema de extracción automática de datos desde facturas y remitos utilizando modelos de visión de OpenAI.
-
-## Tecnologías
-
-- Python
-- OpenAI Vision API
-- Streamlit
+Sistema de extracción automática de datos desde facturas usando IA multimodal.
 
 ## Funcionalidad
 
-El sistema permite subir una imagen de factura y extrae:
+La aplicación permite:
 
-- proveedor
-- fecha
-- número de documento
-- items
-- monto total
+1. Subir una imagen de una factura o remito
+2. Extraer automáticamente los datos usando IA
+3. Estructurar la información en formato JSON
+4. Guardar los datos en una base PostgreSQL (Supabase)
+5. Consultar el historial de facturas procesadas
 
-## Ejecutar el proyecto
+## Arquitectura
 
-pip install -r requirements.txt
+Imagen de factura
+↓
+Gemini Vision
+↓
+Extracción estructurada
+↓
+Normalización de datos
+↓
+Supabase Database
+↓
+Dashboard en Streamlit
 
-streamlit run app.py
+## Tecnologías utilizadas
+
+- Python
+- Streamlit
+- Google Gemini
+- Supabase
+- Pandas
+
+## Demo del flujo
+
+Factura → IA → JSON → Base de datos → Historial
+
+## Autor
+
+Luis De Gregorio
+Ingeniería en Automatización y Control Industrial
