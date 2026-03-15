@@ -6,7 +6,7 @@ genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 def extract_document_data(image):
 
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
 
     prompt = """
     Actúa como un sistema experto en procesamiento de facturas.
